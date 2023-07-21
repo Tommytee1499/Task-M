@@ -5,7 +5,7 @@ const myBtn =document.querySelector("#btn")
 const modal= document.getElementById('modal')
 const close = document.getElementById('close')
 
-
+// comment added
 myBtn.addEventListener('click',()=>{
    modal.style.display = "block";
 })
