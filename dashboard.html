@@ -3,77 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link rel="stylesheet" href="css/all.min.css">
 </head>
 <body>
     <div class="container">
         <div class="box-container">
             <h2 class="text">My Task</h2>
             <div class="box-1">
-                
-            <button class="btn" id="btn">Add task</button>
-
-            <p class="pre-text">Sign out</p>
+                <button class="btn" id="btn">Add task</button>
+                <p class="pre-text" id="signOut">Sign out</p>
             </div>
-            
         </div>
         <div class="line"></div>
-               <ul>
-                <li> <a href=""><i class="fa-solid fa-bars"></i></a>list </li>
-
-                <li> <a href=""><i class="fa-solid fa-pen-to-square"></i></a>board</li>
-               </ul>
+        <ul>
+            <li><a href=""><i class="fa-solid fa-bars"></i></a>list</li>
+            <li><a href=""><i class="fa-solid fa-pen-to-square"></i></a>board</li>
+        </ul>
         <div class="line"></div>
-    
-
+    </div>
 
     <div class="modal" id="modal">
-
-          <!-- Modal content -->
         <div class="modal-content">
-            <form>
+            <form id="taskForm">
                 <div>
-                    <label for="">Input Task</label>
-                    <input type="text" placeholder="task">
+                    <label for="taskInput">Input Task</label>
+                    <input type="text" placeholder="task" id="taskInput">
                 </div>
-                
                 <div>
-                    <label for="">Date</label>
-                    <input type="text">
+                    <label for="dateInput">Date</label>
+                    <input type="text" id="dateInput">
                 </div>
+                <button type="button" id="submitTaskBtn">Submit Task</button>
+                <button type="button" id="closeModal">Close</button> <!-- Add close button -->
             </form>
         </div>
-        
-    <!-- <div class="todo-container" id="todo-container">
-       
-        <h4>To do list</h4>
-        <div class="line"></div>
-        <ul id="list-container" class="list-container">
-
-        </ul>
-    </div>
-    <div class="todo-container">
-        <h4>To do list</h4>
-        <div class="line"></div>
-    </div>
-    <div class="todo-container">
-        <h4>To do list</h4>
-        <div class="line"></div>
-    </div> -->
-
     </div>
 
-
-        
-        
-        
-       
-    </div>
-    <script src="js/bootstrap.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
