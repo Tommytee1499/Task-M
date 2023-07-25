@@ -26,17 +26,23 @@
     <div class="modal" id="modal">
         <div class="modal-content">
             <form id="taskForm">
-                <div>
-                    <label for="taskInput">Input Task</label>
+                <div class="task-input">
+                    <label for="taskInput">Task Name</label> <br>
                     <input type="text" placeholder="task" id="taskInput">
                 </div>
-                <div>
-                    <label for="dateInput">Date</label>
-                    <input type="text" id="dateInput">
+                <div class="date-input">
+                    <label for="dateInput">Date</label> <br>
+                    <input type="date" id="dateInput">
                 </div>
+
+               <textarea name="Message" id="textarea" cols="30" rows="10">
+                
+               </textarea>
                 <button type="button" id="submitTaskBtn">Submit Task</button>
                 <button type="button" id="closeModal">Close</button> <!-- Add close button -->
             </form>
+
+            
         </div>
     </div>
 
