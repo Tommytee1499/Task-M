@@ -92,7 +92,7 @@ ul li a{
     padding: 20px;
     border: 1px solid #888;
     width: 25%;
-    height:300px;
+    height:350px;
   }
   
   /* The Close Button */
@@ -146,3 +146,13 @@ h4{
     }
 }
 
+.date-input{
+    margin-bottom:5px;
+}
+.task-input{
+    width: 100%;
+    padding:5px;
+}
+#textarea{
+    width:100%;
+}
