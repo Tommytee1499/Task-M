@@ -7,6 +7,8 @@ const submitBtn = document.getElementById('submitBtn');
 const btn = document.getElementById('btn');
 const signOutLink = document.getElementById('signOut');
 const closeModalBtn = document.getElementById('closeModal'); // Add the close button
+const submitTaskBtn = document.getElementById('submitTaskBtn');
+
 
 if(close){
    close.addEventListener('click', () => {
@@ -52,3 +54,34 @@ signOutLink.addEventListener('click', () => {
     // Redirect to the sign-in page
     window.location.href = "index.html";
 });
+
+const taskContainer = document.querySelector('.task-container'); // Add this line to select the task container element
+
+if(submitTaskBtn){
+   submitTaskBtn.addEventListener('click', () => {
+      handleTaskSubmission();
+    });
+}
+
+function handleTaskSubmission() {
+   console.log("here")
+    const taskInput = document.getElementById('taskInput').value.trim();
+    const dateInput = document.getElementById('dateInput').value;
+    const descriptionInput = document.getElementById('textarea').value.trim();
+
+    if (taskInput === '' || dateInput === '' || descriptionInput === '') {
+        alert('Please fill in all fields.');
+        return;
+    }
+
+    // Create a new list item (<li>) to hold the task details
+    const taskItem = document.createElement('li');
+    taskItem.innerHTML = `<strong>${taskInput}</strong> - ${dateInput}<br>${descriptionInput}`;
+
+    // Append the new list item to the task container
+    taskContainer.appendChild(taskItem);
+
+    // Clear the form inputs and close the modal
+    document.getElementById('taskForm').reset();
+    modal.style.display = "none";
+}
